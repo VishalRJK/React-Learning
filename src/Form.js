@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from 'muicss/lib/react/button';
+import {Button} from 'react-md';  
 let Roles=["Developer","Admin","Guest"];
 var Optionize = function(option){return(<option>{option}</option>);}
 class NewForm extends Component{
@@ -22,7 +22,7 @@ class NewForm extends Component{
         <label value="url"> URL  </label> <input id="url" type="text" ref="url" value={this.state.url}  placeholder="Enter the URL ..."  /><br/>
         <label value="role"> Role </label><select id="role" ref="role" value={this.state.role} onChange={this.handleChangeRole}>{Roles.map(Optionize)}   
          </select><br/>
-         <Button  type="Submit" onClick={this.handleClick} value="Submit" >Submit </Button>
+         <Button flat type="submit" onClick={this.handleClick} value="Submit" >Submit </Button>
     </form>
     </div>
     );
